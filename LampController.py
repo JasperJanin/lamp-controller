@@ -1,5 +1,4 @@
 import requests
-import color as c
 
 
 class Lamp:
@@ -14,9 +13,6 @@ class Lamp:
         body = color
         requests.put(self.lampURL, json={"effect": color["effect"]})
         requests.put(self.lampURL, json=body)
-
-    def setMaxColor(self, hue):
-        self.setLight(c.maxColor(hue))
 
     def colorloop(self):
         body = {"effect": "colorloop"}
