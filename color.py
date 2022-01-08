@@ -32,6 +32,24 @@ PURPLE = hue(51882)
 MAGENTA = hue(54613)
 PINK = hsb(0, 150, 254)
 
+colorChoices = {
+    "Off": OFF,
+    "Rainbow": RAINBOW,
+    "Cold white": COLD,
+    "Warm white": WARM,
+    "Red": RED,
+    "Orange": ORANGE,
+    "Yellow": YELLOW,
+    "Lime": LIME,
+    "Green": GREEN,
+    "Cyan": CYAN,
+    "Blue": BLUE,
+    "Violet": VIOLET,
+    "Purple": PURPLE,
+    "Magenta": MAGENTA,
+    "Pink": PINK
+}
+
 ############################################################################
 # snippet from https://gist.github.com/error454/6b94c46d1f7512ffe5ee
 # This is based on original code from http://stackoverflow.com/a/22649803
