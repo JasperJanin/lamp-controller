@@ -10,7 +10,7 @@ def hue(hue): return setDict({"hue": hue})
 
 
 def hsb(h, s, b): return setDict({"hue": h, "sat": s, "bri": b})
-def xy(x, y): return setDict({"xy": [x, y]})
+def xyY(x, y, bri): return setDict({"xy": [x, y], "bri":bri})
 
 
 OFF = setDict({"on": False})
@@ -76,15 +76,15 @@ def __RGBtoXY(r, g, b):
     Z = rFinal * 0.000000 + gFinal * 0.053077 + bFinal * 1.035763
 
     if X + Y + Z == 0:
-        return (0, 0)
+        return (0, 0, 0)
     else:
         xFinal = X / (X + Y + Z)
         yFinal = Y / (X + Y + Z)
 
-        return (xFinal, yFinal)
+        return (xFinal, yFinal, 254)
 ############################################################################
 
 
 def rgb(r, g, b):
-    x, y = __RGBtoXY(r, g, b)
-    return xy(x, y)
+    x, y, bri = __RGBtoXY(r, g, b)
+    return xyY(x, y, bri)
